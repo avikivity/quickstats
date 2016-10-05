@@ -39,7 +39,7 @@ while True:
     if any([rate[0] >= threshold or rate[1] >= threshold
             for rate in rates.values()]):
         print('{} UTC'.format(now), end='', flush=False)
-        for key in rates.keys():
+        for key in sorted(rates.keys()):
             rx, tx = rates[key]
             print(' {:8} {:10} {:10}'.format(key, rx, tx),
                   end='', flush=False)
